@@ -1,5 +1,5 @@
 # web-notification
-Vanilla Web Component for the HTML5 Notifications API
+Vanilla Web Component for the HTML5 Notifications API. [Demo](https://github.com/deebloo/web-notification)
 
 ##### Instalation
 ```
