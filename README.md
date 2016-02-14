@@ -11,6 +11,12 @@ Vanilla Web Component for the HTML5 Notifications API
 | timeout        | amount of time to display notifcation before auto hiding  |
 | notify-on-load | trigger notification as soon as the component is created | 
 
+#### API
+
+| Name      | Description |
+| --------- | ------------- |
+| .notify() | Manually triggers the notification  |
+
 #### Example
 ```HTML
 <!DOCTYPE html>
