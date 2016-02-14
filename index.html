@@ -12,14 +12,13 @@
                       icon="homer-simpson.jpg"
                       timeout="1000"></web-notification>
 
-    <web-notification id="notificationEl2"
-                      title="Notification 2"
+    <web-notification title="Notification 2"
                       body="Goodbye World"
-                      icon="marge-simpson.png"></web-notification>
+                      icon="marge-simpson.png"
+                      notify-on-load="true"></web-notification>
 
     <script>
         document.getElementById('notificationEl1').notify();
-        document.getElementById('notificationEl2').notify();
     </script>
 </body>
 </html>

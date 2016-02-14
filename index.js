@@ -18,6 +18,10 @@
             value: ('Notification' in window)
         });
         this.setAttribute('supported', this.supported);
+
+        if(this.getAttribute('notify-on-load')) {
+            this.notify();
+        }
     };
 
     /**
