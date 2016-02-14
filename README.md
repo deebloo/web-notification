@@ -1,6 +1,13 @@
 # web-notification
 Vanilla Web Component for the HTML5 Notifications API
 
+##### Instalation
+```
+npm i --save web-notification
+
+bower install --save web-notification
+```
+
 #### Properties
 
 | Name           | Description |
