@@ -10,46 +10,50 @@
 })('device-orientation', function () {
     var doProto = Object.create(HTMLElement.prototype);
 
+    /**
+     * Define if notifications are available and if permission is granted
+     */
     doProto.createdCallback = function () {
         Object.defineProperty(this, 'supported', {
             value: ('Notification' in window)
         });
         this.setAttribute('supported', this.supported);
-
-        if(this.supported) {
-            Object.defineProperty(this, 'permission', {
-                value: Notification.permission
-            });
-            this.setAttribute('permission', this.permission);
-        }
     };
 
+    /**
+     * Trigger notification
+     */
     doProto.notify = function () {
-        if(!this.supported) {
+        if (!this.supported) {
             return false;
         }
 
-        var title = this.getAttribute('title');
-        var body = this.getAttribute('body');
+        this.timeout = parseInt(this.getAttribute('timeout'), 10);
 
-        switch(this.permission) {
-            case 'granted':
-                new Notification(title, {
-                    body: body
-                });
-                break;
-            case 'denied':
-                break;
-            default:
-                Notification.requestPermission(function (permission) {
-                    if (permission === 'granted') {
-                        new Notification(title, {
-                            body: body
-                        });
-                    }
-                });
-        }
+        Notification.requestPermission(_notify.bind(this));
     };
+
+    /**
+     * If Permission is granted, create notification based on element config
+     *
+     * @param {string} permission - if the user has allowed notifications
+     *
+     * @private
+     */
+    function _notify(permission) {
+        if (permission === 'granted') {
+            var notification = new Notification(this.getAttribute('title'), {
+                body: this.getAttribute('body'),
+                icon: this.getAttribute('icon')
+            });
+
+            if (this.timeout > 0) {
+                setTimeout(function () {
+                    notification.close();
+                }, this.timeout);
+            }
+        }
+    }
 
     return document.registerElement('web-notification', {
         prototype: doProto
