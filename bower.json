@@ -1,31 +1,32 @@
 {
-  "name": "web-notification",
-  "description": "Vanilla Web Component for interacting with the Web Notifications API",
-  "main": "index.js",
-  "authors": [
-    "deebloo <dannybluedesign@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "Web",
-    "Component",
-    "Custom",
-    "Elements",
-    "Web",
-    "Notifications",
-    "HTML5"
-  ],
-  "homepage": "https://github.com/deebloo/web-notification",
-  "moduleType": [
-    "es6",
-    "globals",
-    "node"
-  ],
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+    "name": "web-notification",
+    "description": "Vanilla Web Component for interacting with the Web Notifications API",
+    "version": "1.0.0",
+    "main": "index.js",
+    "authors": [
+        "deebloo <dannybluedesign@gmail.com>"
+    ],
+    "license": "MIT",
+    "keywords": [
+        "Web",
+        "Component",
+        "Custom",
+        "Elements",
+        "Web",
+        "Notifications",
+        "HTML5"
+    ],
+    "homepage": "https://github.com/deebloo/web-notification",
+    "moduleType": [
+        "es6",
+        "globals",
+        "node"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ]
 }
