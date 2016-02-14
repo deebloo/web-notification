@@ -1,0 +1,17 @@
+{
+  "name": "web-notification",
+  "version": "1.0.0",
+  "description": "Vanilla Web Component for interacting with the Web Notifications API",
+  "main": "index.js",
+  "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+      "Web Component",
+      "Custom Elements",
+      "Web Notifications",
+      "HTML5"
+  ],
+  "author": "deebloo <dannybluedesign@gmail.com>",
+  "license": "MIT"
+}
