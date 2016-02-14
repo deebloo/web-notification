@@ -1,12 +1,13 @@
 {
-  "name": "web-notification",
-  "version": "1.0.0",
-  "description": "Vanilla Web Component for interacting with the Web Notifications API",
-  "main": "index.js",
-  "scripts": {
+   "name": "web-notification",
+   "version": "1.0.1",
+   "description": "Vanilla Web Component for interacting with the Web Notifications API",
+    "repository": "https://github.com/deebloo/web-notification",
+   "main": "index.js",
+   "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
+   },
+   "keywords": [
       "Web Component",
       "Custom Elements",
       "Web Notifications",
