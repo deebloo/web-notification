@@ -1,4 +1,6 @@
 describe('WebNotification', function () {
+    window.createWebNotification = window.createWebNotification || function () {};
+
     var notificationElement;
 
     var config = {

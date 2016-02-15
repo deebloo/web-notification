@@ -5,9 +5,12 @@
         if (typeof module === 'object' && typeof module.exports === 'object') {
             module.exports = exposeFactory;
         }
+
         exports[name] = exposeFactory;
+
         return;
     }
+
     this[name] = exposeFactory;
 
     function exposeFactory(opts) {
