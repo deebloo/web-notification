@@ -2,7 +2,7 @@
     expose('createWebNotification', register, factory);
 
     /**
-     * Exposes your new component to the window or to a module
+     * Exposes the new component to the window or to a module
      *
      * @param {string} name - the factory name to expose
      * @param {function} definition - the definition of your web component. registers to the document
@@ -31,7 +31,7 @@
     }
 
     /**
-     * Create and register your web component with the document
+     * Create and register component with the document
      */
     function register() {
         var doProto = Object.create(HTMLElement.prototype);
@@ -87,7 +87,7 @@
     }
 
     /**
-     * factory for creating new dynamic instance of the component
+     * create a new instance of the registered component
      *
      * @param {function} Component - the registered component Constructor/class
      * @param {object} options - a map of attributes to attach to the new component instance
