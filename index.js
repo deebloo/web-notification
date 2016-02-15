@@ -18,7 +18,7 @@
 
             exports[name] = exposeFactory;
 
-            return;
+            return exposeFactory;
         }
 
         this[name] = exposeFactory;
@@ -27,7 +27,7 @@
             return factory(Component, opts);
         }
 
-        return exposeFactory();
+        return exposeFactory;
     }
 
     /**
