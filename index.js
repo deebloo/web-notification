@@ -1,32 +1,34 @@
-(function (name, definition) {
+(function (name, definition, factory) {
+    var Component = definition();
+
     if (typeof exports === 'object') {
         if (typeof module === 'object' && typeof module.exports === 'object') {
-            module.exports = definition();
+            module.exports = exposeFactory;
         }
-        exports[name] = definition();
+        exports[name] = exposeFactory;
         return;
     }
-    this[name] = definition();
-})('WebNotification', function () {
+    this[name] = exposeFactory;
+
+    function exposeFactory(opts) {
+        return factory(Component, opts);
+    }
+})('createWebNotification', function definition() {
     var doProto = Object.create(HTMLElement.prototype);
 
-    /**
-     * Define if notifications are available and if permission is granted
-     */
+    // Define if notifications are available and if permission is granted
     doProto.createdCallback = function () {
         Object.defineProperty(this, 'supported', {
             value: ('Notification' in window)
         });
         this.setAttribute('supported', this.supported);
 
-        if(this.getAttribute('notify-on-load')) {
+        if (this.getAttribute('notify-on-load')) {
             this.notify();
         }
     };
 
-    /**
-     * Trigger notification
-     */
+    // Trigger the notification
     doProto.notify = function () {
         if (!this.supported) {
             return false;
@@ -62,4 +64,14 @@
     return document.registerElement('web-notification', {
         prototype: doProto
     });
+}, function factory (Component, options) {
+    var newEl = new Component();
+
+    for(var option in options) {
+        if(options.hasOwnProperty(option)) {
+            newEl.setAttribute(option, options[option]);
+        }
+    }
+
+    return newEl;
 });
