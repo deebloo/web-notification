@@ -7,7 +7,7 @@
         return;
     }
     this[name] = definition();
-})('device-orientation', function () {
+})('web-notification', function () {
     var doProto = Object.create(HTMLElement.prototype);
 
     /**

@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Mon Feb 15 2016 08:15:57 GMT-0500 (EST)
+// Generated on Mon Feb 15 2016 08:22:52 GMT-0500 (EST)
 
 module.exports = function (config) {
     config.set({
@@ -10,13 +10,12 @@ module.exports = function (config) {
 
         // frameworks to use
         // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-        frameworks: ['mocha'],
+        frameworks: ['jasmine'],
 
 
         // list of files / patterns to load in the browser
         files: [
             'index.js',
-            'bower_components/webcomponentsjs/CustomElements.min.js',
             'tests/**.spec.js'
         ],
 
@@ -66,4 +65,4 @@ module.exports = function (config) {
         // how many browser should be started simultaneous
         concurrency: Infinity
     })
-}
+};

@@ -1,7 +1,7 @@
 {
   "name": "web-notification",
   "description": "Vanilla Web Component for interacting with the Web Notifications API",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "index.js",
   "authors": [
     "deebloo <dannybluedesign@gmail.com>"

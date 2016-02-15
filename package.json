@@ -1,6 +1,6 @@
 {
   "name": "web-notification",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Vanilla Web Component for interacting with the Web Notifications API",
   "repository": "https://github.com/deebloo/web-notification",
   "main": "index.js",
