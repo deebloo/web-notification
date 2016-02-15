@@ -5,7 +5,7 @@
   "repository": "https://github.com/deebloo/web-notification",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node node_modules/karma/bin/karma start"
   },
   "keywords": [
     "Web Component",
@@ -16,6 +16,9 @@
   "author": "deebloo <dannybluedesign@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "karma": "^0.13.21"
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.7"
   }
 }

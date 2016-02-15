@@ -7,7 +7,7 @@
         return;
     }
     this[name] = definition();
-})('web-notification', function () {
+})('WebNotification', function () {
     var doProto = Object.create(HTMLElement.prototype);
 
     /**

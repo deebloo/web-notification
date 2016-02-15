@@ -1,5 +1,7 @@
 describe('WebNotification', function () {
     it('should create a web notification web component instance', function () {
-        //console.log();
+        var notificationElement = new WebNotification();
+
+        expect(notificationElement instanceof WebNotification).toBe(true);
     });
 });
