@@ -55,8 +55,13 @@ bower install --save web-notification
 #### Dynamic
 To dnyamically add new notification elements.
 ```JS
-var WebNotification = require('web-notification'); // or available by 'WebNotification' on window if not using modules
-var myNotification = new WebNotification();
+var createWebNotification = require('web-notification'); // or available by 'createWebNotification' on window if not using modules
+
+var myNotification = createWebNotification({
+    title: 'My Title',
+    body: 'My Body'
+});
+
 document.appendElement(myNotification);
 ```
 
